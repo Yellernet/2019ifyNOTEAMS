@@ -1,5 +1,65 @@
+local player = game:GetService("Players").LocalPlayer
+
+
+
 -- Gui to Lua
 -- Version: 3.2
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Retroify") then
+	game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Retroify"):Destroy()
+end
+
+-- Gui to Lua
+
+if game.CoreGui.TopBarApp:FindFirstChild("UnibarLeftFrame") then
+		game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true) 
+	local tba = game.CoreGui.TopBarApp 
+	local um = tba.UnibarLeftFrame.UnibarMenu 
+	local tp = tba.MenuIconHolder.TriggerPoint 
+	tp.Background.Position = UDim2.new(0, -7.5,1, 0) 
+	tp.Background.ScalingIcon.ImageTransparency = 1 
+	tp.Background.BackgroundTransparency = 1 
+	um["2"]["3"].nine_dot.Visible = false 
+	um["2"]["2"].BackgroundTransparency = 1 
+	um["2"]["3"].chat.Position = UDim2.new(0,-20,0,-15) 
+	um["2"]["3"].chat.IntegrationIconFrame.IntegrationIcon.ImageTransparency = 1 
+else
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(0,0,10,0)
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.Icon.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.StateOverlay.ImageTransparency = 1
+
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Icon.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.StateOverlay.ImageTransparency = 1
+
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.ImageTransparency = 1
+
+
+
+	game.CoreGui.TopBarApp.TopBarFrame.RightFrame.Visible = false
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(4,0,1,0)
+
+end
+-- Version: 3.2
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("MenuSreen2019CoreGui") then
+	game:GetService("Players").LocalPlayer.PlayerGui.MenuSreen2019CoreGui:Destroy()
+end
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("EarlyCoreGui2") then
+	game:GetService("Players").LocalPlayer.PlayerGui.EarlyCoreGui2:Destroy()
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Instances:
 
@@ -333,19 +393,19 @@ local Gui = {
 	LeaveGameButtonButton = Instance.new("ImageButton"),
 	LeaveGameButtonTextLabel = Instance.new("TextLabel"),
 	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
-	LeaveGameHint = Instance.new("ImageLabel"),
-	ResetCharacterButtonButton = Instance.new("ImageButton"),
-	ResetCharacterButtonTextLabel = Instance.new("TextLabel"),
-	UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint"),
-	ResetCharacterHint = Instance.new("ImageLabel"),
-	ResumeButtonButton_2 = Instance.new("ImageButton"),
-	ResumeButtonTextLabel_2 = Instance.new("TextLabel"),
-	UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint"),
-	ResumeHint = Instance.new("ImageLabel"),
-}
+		LeaveGameHint = Instance.new("ImageLabel"),
+		ResetCharacterButtonButton = Instance.new("ImageButton"),
+		ResetCharacterButtonTextLabel = Instance.new("TextLabel"),
+		UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint"),
+		ResetCharacterHint = Instance.new("ImageLabel"),
+		ResumeButtonButton_2 = Instance.new("ImageButton"),
+		ResumeButtonTextLabel_2 = Instance.new("TextLabel"),
+		UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint"),
+		ResumeHint = Instance.new("ImageLabel"),
+	}
 
 --Properties:
-local Retroify = Instance.new("Folder", game.Players.LocalPlayer.PlayerGui)
+local Retroify = Instance.new("Folder", game:GetService("Players").LocalPlayer.PlayerGui)
 Retroify.Name = "Retroify"
 -- Gui to Lua
 -- Version: 3.2
@@ -794,7 +854,7 @@ Gui.UITextSizeConstraint_3.Parent = Gui.ResumeButtonTextLabel
 Gui.UITextSizeConstraint_3.MaxTextSize = 24
 
 Gui.PlayerLabelunknown.Name = "PlayerLabelunknown"
-Gui.PlayerLabelunknown.Parent = Gui.Players
+Gui.PlayerLabelunknown.Parent = game:GetService("Players").LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame
 Gui.PlayerLabelunknown.BackgroundTransparency = 1.000
 Gui.PlayerLabelunknown.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Gui.PlayerLabelunknown.LayoutOrder = 2
@@ -3258,6 +3318,9 @@ Gui.Selection2_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 Gui.Selection2_6.TextSize = 24.000
 Gui.Selection2_6.TextTransparency = 0.500
 
+local MenuContainer = player.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer
+
+
 Gui.GraphicsModeFrame.Name = "Graphics ModeFrame"
 Gui.GraphicsModeFrame.Parent = Gui.Page
 Gui.GraphicsModeFrame.Active = false
@@ -4101,6 +4164,27 @@ local function TYZKGEF_fake_script() -- Gui.PlayersTab.LocalScript
 	end)
 	
 end
+
+
+
+Gui.PlayerLabelunknown.Name = "PlayerLabelunknown"
+Gui.PlayerLabelunknown.Parent = game:GetService("Players").LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
+Gui.PlayerLabelunknown.BackgroundTransparency = 1.000
+Gui.PlayerLabelunknown.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gui.PlayerLabelunknown.LayoutOrder = 2
+Gui.PlayerLabelunknown.Size = UDim2.new(1, 0, 0, 62)
+Gui.PlayerLabelunknown.Visible = false
+Gui.PlayerLabelunknown.ZIndex = 2
+Gui.PlayerLabelunknown.Image = "rbxasset://textures/ui/dialog_white.png"
+Gui.PlayerLabelunknown.ImageTransparency = 0.850
+Gui.PlayerLabelunknown.ScaleType = Enum.ScaleType.Slice
+Gui.PlayerLabelunknown.SliceCenter = Rect.new(10, 10, 10, 10)
+
+
+
+
+
+
 coroutine.wrap(TYZKGEF_fake_script)()
 local function YAGIRED_fake_script() -- Gui.GameSettingsTab.LocalScript 
 	local script = Instance.new('LocalScript', Gui.GameSettingsTab)
@@ -4222,7 +4306,8 @@ local function HZCMA_fake_script() -- Gui.Players.LocalScript
 	local script = Instance.new('LocalScript', Gui.Players)
 
 	local function addPlayerToGui(plr)
-		local playersButthegui = script.Parent
+		local playersButthegui = game:GetService("Players").LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
+		playersButthegui.Size = UDim2.new(1,0,1,0)
 		-- Check if a clone with the same name already exists before doing anything
 		if playersButthegui:FindFirstChild("PlayerLabel".. plr.Name) then
 			playersButthegui["PlayerLabel".. plr.Name]:Destroy() -- Remove existing UI
@@ -4233,7 +4318,7 @@ local function HZCMA_fake_script() -- Gui.Players.LocalScript
 		clone.Name = "PlayerLabel".. plr.Name
 		clone.NameLabel.Text = plr.Name
 		if not plr:FindFirstChild("PlayerGui") then
-			clone.NameLabel.Text = plr.Name.. "*"
+			clone.NameLabel.Text = plr.Name
 			
 		else
 			clone.Icon.Image = "https://www.roblox.com/avatar-thumbnail/image?width=10&height=10&format=jpeg&userId=".. plr.UserId
@@ -4287,7 +4372,7 @@ local function RMNJQ_fake_script() -- Gui.LeaveGameButton.LocalScript
 		script.Parent.Image = image1
 	end)
 	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer:Kick("You didn't get banned, you just Left.")
+		game:GetService("Players").LocalPlayer:Kick("You didn't get banned, you just Left.")
 	end)
 end
 coroutine.wrap(RMNJQ_fake_script)()
@@ -4333,7 +4418,7 @@ local function FBER_fake_script() -- Gui.ResetCharacterButton.LocalScript
 	local script = Instance.new('LocalScript', Gui.ResetCharacterButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.Character.Head:Destroy()
+		game:GetService("Players").LocalPlayer.Character.Head:Destroy()
 	end)
 end
 coroutine.wrap(FBER_fake_script)()
@@ -4474,6 +4559,7 @@ PlayerListContainer.BorderColor3 = Color3.fromRGB(27, 42, 53)
 PlayerListContainer.Position = UDim2.new(1, -170, 0, 38)
 PlayerListContainer.Size = UDim2.new(0, 170, 0.5, 0)
 
+Gui.RowListLayout.Parent = game:GetService("Players").LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
 
 ScrollList.Name = "ScrollList"
 ScrollList.Parent = PlayerListContainer
@@ -4531,6 +4617,17 @@ PlayerName.TextXAlignment = Enum.TextXAlignment.Left
 
 UIListLayout.Parent = ScrollList
 UIListLayout.Padding = UDim.new(0, 2)
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+
+for i, v in pairs(game.Teams:GetChildren()) do
+	local a = zzzzzzzzzzTemplate:Clone()
+	a.BGFrame.PlayerName.Text = v.Name
+end
+
+
+
+
 
 PopupClipFrame.Name = "PopupClipFrame"
 PopupClipFrame.Parent = PlayerListContainer
@@ -4543,58 +4640,117 @@ PopupClipFrame.Size = UDim2.new(0, 150, 1.5, 0)
 -- Scripts:
 
 local function EGVWZV_fake_script() -- PlayerListContainer.LocalScript 
-	local script = Instance.new('LocalScript', PlayerListContainer)
+local script = Instance.new('LocalScript', PlayerListContainer)
 
-	local Players = game:GetService("Players")
-	local localPlayer = Players.LocalPlayer  -- Client-side reference
-	local guiParent = script.Parent.ScrollList  -- The GUI parent where player UI elements will be added
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer  -- Client-side reference
+local guiParent = script.Parent.ScrollList  -- The GUI parent where player UI elements will be added
+local uiListLayout = guiParent:FindFirstChildOfClass("UIListLayout")
+uiListLayout.SortOrder = Enum.SortOrder.LayoutOrder  -- Ensure players are sorted correctly
 
-	local function update(plr)
-		local template = guiParent.zzzzzzzzzzTemplate
-		local name = plr.Name
-		if not plr.ClassName == "Player" then
-			return
-		end
-		-- Remove existing UI for the player if it exists
-		local existingUI = guiParent:FindFirstChild(plr.Name)
-		if existingUI then
-			existingUI:Destroy()
-		end
-
-		-- Clone and set up the new UI element
-		local clone = template:Clone()
-		clone.Name = plr.Name
-		clone.BGFrame.PlayerName.Text = plr.Name
-		clone.Parent = guiParent  -- Parent to the UI ScrollList
-		local haspremium = plr.MembershipType == Enum.MembershipType.Premium
-		local hasowner = plr.UserId == game.CreatorId
-		-- Set the correct membership icon
-		if hasowner then
-			clone.BGFrame.MembershipIcon.Image = "rbxasset://textures/ui/PlayerList/DeveloperIcon.png"
-		elseif haspremium then
-			clone.BGFrame.MembershipIcon.Image = "rbxasset://textures/ui/PlayerList/PremiumIcon.png"
-		end
-
-		clone.Visible = true
+local function update(plr)
+	local template = guiParent.zzzzzzzzzzTemplate
+	local name = plr.Name
+	if not plr:IsA("Player") then
+		return
+	end
+	-- Remove existing UI for the player if it exists
+	local existingUI = guiParent:FindFirstChild(plr.Name)
+	if existingUI then
+		existingUI:Destroy()
 	end
 
-	-- Function to update the UI for all current players
-	local function updateAllPlayers()
-		for _, plr in ipairs(Players:GetChildren()) do  -- Uses GetChildren() for client-side compatibility
-			update(plr)
+	-- Clone and set up the new UI element
+	local clone = template:Clone()
+	clone.Name = plr.Name
+
+	-- Fetch leaderstats and append them to the player's name
+	local displayName = plr.Name
+	local leaderstats = plr:FindFirstChild("leaderstats")
+	if leaderstats then
+		for _, stat in ipairs(leaderstats:GetChildren()) do
+			if stat:IsA("IntValue") or stat:IsA("NumberValue") or stat:IsA("StringValue") then
+				displayName = displayName .. " ".. tostring(stat.Value)
+			end
 		end
 	end
 
-	-- Handle player joining (Client cannot detect `PlayerAdded`, so we refresh periodically)
-	updateAllPlayers()
+	clone.BGFrame.PlayerName.Text = displayName
+	clone.Parent = guiParent  -- Parent to the UI ScrollList
 
-	-- Handle player leaving
-	Players.PlayerRemoving:Connect(function(plr)
-		local existingUI = guiParent:FindFirstChild(plr.Name)
-		if existingUI then
-			existingUI:Destroy()
+	-- Set background color to team color if the player is in a team
+	local function updateTeamColor()
+		if plr.Team then
+			clone.BGFrame.BackgroundColor3 = plr.Team.TeamColor.Color
+		else
+			clone.BGFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Default to white if no team
 		end
+	end
+
+	updateTeamColor()
+	
+	local haspremium = plr.MembershipType == Enum.MembershipType.Premium
+	local hasowner = plr.UserId == game.CreatorId
+	-- Set the correct membership icon
+	if hasowner then
+		clone.BGFrame.MembershipIcon.Image = "rbxasset://textures/ui/PlayerList/DeveloperIcon.png"
+	elseif haspremium then
+		clone.BGFrame.MembershipIcon.Image = "rbxasset://textures/ui/PlayerList/PremiumIcon.png"
+	end
+
+	clone.Visible = true
+
+	-- Listen for team changes and update background color
+	plr:GetPropertyChangedSignal("Team"):Connect(function()
+		updateTeamColor()
+		updateAllPlayers()
 	end)
+
+	-- Listen for leaderstats changes and update the displayed stats
+	if leaderstats then
+		for _, stat in ipairs(leaderstats:GetChildren()) do
+			stat:GetPropertyChangedSignal("Value"):Connect(function()
+				updateAllPlayers()
+			end)
+		end
+	end
+end
+
+-- Function to update the UI for all current players and sort them by team
+local function updateAllPlayers()
+	local playerEntries = {}
+	for _, plr in ipairs(Players:GetPlayers()) do
+		update(plr)
+		local entry = guiParent:FindFirstChild(plr.Name)
+		if entry then
+			table.insert(playerEntries, {plr.Team and plr.Team.Name or "ZZZ", entry})
+		end
+	end
+
+	-- Sort players so those in the same team are grouped together
+	table.sort(playerEntries, function(a, b)
+		if a[1] == "ZZZ" and b[1] ~= "ZZZ" then return false end
+		if b[1] == "ZZZ" and a[1] ~= "ZZZ" then return true end
+		return a[1] < b[1]
+	end)
+
+	-- Reorder UI elements
+	for index, entry in ipairs(playerEntries) do
+		entry[2].LayoutOrder = index
+	end
+end
+
+Players.ChildAdded:Connect(update)
+updateAllPlayers()
+
+-- Handle player leaving
+Players.ChildRemoved:Connect(function(plr)
+	local existingUI = guiParent:FindFirstChild(plr.Name)
+	if existingUI then
+		existingUI:Destroy()
+	end
+	updateAllPlayers()
+end)
 
 end
 coroutine.wrap(EGVWZV_fake_script)()
@@ -4791,6 +4947,7 @@ local function TFQCOH_fake_script() -- LoadingImage.LocalScript
 		script.Parent.Rotation+=4
 	end
 end
+
 coroutine.wrap(TFQCOH_fake_script)()
 local function AHOF_fake_script() -- LoadingImage.LocalScript 
 	local script = Instance.new('LocalScript', LoadingImage)
@@ -5115,3 +5272,8 @@ local function QENVPW_fake_script() -- Settings.LocalScript
 	script.Parent.MouseButton1Click:Connect(onClick)
 end
 coroutine.wrap(QENVPW_fake_script)()
+
+local scroll = MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
+scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+scroll.CanvasSize = UDim2.new(0,0,4,0)
+print("2019 CoreGui Script by alugpl has finished loading!")
